@@ -40,7 +40,7 @@
                     <td>{{ $dt->second_weight }}</td>
                     <td>{{ $dt->first_weight_time }}</td>
                     <td>{{ $dt->second_weight_time }}</td>
-                    <td><a href="{{ route('edit', $dt->id )}}" class="btn btn-primary">Update</a> <a href="{{ route('cetakulang', $dt->id)}}" class="btn btn-primary">Cetak Ulang</a></td>
+                    <td><a href="{{ route('edit', $dt->id )}}" class="btn btn-primary">Update</a> <a href="{{ route('cetakulang', $dt->id)}}" class="btn btn-primary" target="_blank" onclick="return !window.open(this.href, 'somesite', 'width=700,height=700')">Cetak Ulang</a></td>
                 </tr>
                 @endforeach
             </tbody>

@@ -26,8 +26,8 @@ class WeighingController extends Controller
         $weight->first_weight_time = Carbon::now();
         $weight->first_weight = $request->first_weight;
         $weight->status = 0;
-        $img_path = public_path("uploads/");
-        file_put_contents($img_path, "http://36.72.70.120:81/image/Gdg?time=1639919929050&session=32244da2145f00b849ff740f55db4dfd&decode=1&w=99999&q=85");
+        // $img_path = public_path("uploads/");
+        // file_put_contents($img_path, "http://36.72.70.120:81/image/Gdg?time=1639919929050&session=32244da2145f00b849ff740f55db4dfd&decode=1&w=99999&q=85");
         $weight->save();
 
         return redirect('/');

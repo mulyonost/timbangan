@@ -76,7 +76,7 @@
       <div class="card">
         <h5 class="card-header">Cam</h5>
         <div class="card-body">
-            <img src="http://36.72.70.120:81/image/Gdg?time=1639919066557&session=7c28629753136a12521535f13f2704f3&decode=1&w=99999&q=85" class="img-fluid foto">
+            <img src="" class="img-fluid foto">
         </div>
       </div>
     </div>

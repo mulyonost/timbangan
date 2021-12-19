@@ -20,7 +20,7 @@
                     Data berhasil disimpan
                 </div>
                 <div>
-                    <a target="_blank" href="{{ route('cetak') }}" class="btn btn-warning" onclick="return !window.open(this.href, 'somesite', 'width=700,height=700')"" >Print Timbangan</a>
+                    <a target="_blank" href="{{ route('cetak') }}" class="btn btn-warning" onclick="return !window.open(this.href, 'somesite', 'width=700,height=700')" >Print Timbangan</a>
                     <a href="{{ url("/") }}" class="btn btn-primary">Kembali ke index</a>
                 </div>
             </div>
