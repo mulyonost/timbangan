@@ -64,10 +64,11 @@
         </div>
       </div>
     </div>
-    <div class="col">
+    <div class="col-md-8">
       <div class="card">
-        <h5 class="card-header">Foto</h5>
+        <h5 class="card-header">Cam</h5>
         <div class="card-body">
+            <img src="http://192.168.1.200:81/mjpg/tbg" class="img-fluid foto">
         </div>
       </div>
     </div>

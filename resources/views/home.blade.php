@@ -76,7 +76,7 @@
       <div class="card">
         <h5 class="card-header">Cam</h5>
         <div class="card-body">
-            <img src="" class="img-fluid foto">
+            <img src="http://192.168.1.200:81/mjpg/tbg" class="img-fluid foto">
         </div>
       </div>
     </div>

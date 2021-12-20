@@ -21,4 +21,5 @@ Route::put('/update/{id}', [WeighingController::class, 'update'])->name('update'
 Route::get('/selesai', [WeighingController::class, 'selesai'])->name('selesai');
 Route::get('/cetak', [WeighingController::class, 'cetak'])->name('cetak');
 Route::get('/data', [WeighingController::class, 'data'])->name('data');
+Route::get('/detail/{id}', [WeighingController::class, 'detail'])->name('detail');
 Route::get('/cetakulang/{id}', [WeighingController::class, 'cetakulang'])->name('cetakulang');

@@ -26,8 +26,11 @@ class WeighingController extends Controller
         $weight->first_weight_time = Carbon::now();
         $weight->first_weight = $request->first_weight;
         $weight->status = 0;
-        // $img_path = public_path("uploads/");
-        // file_put_contents($img_path, "http://36.72.70.120:81/image/Gdg?time=1639919929050&session=32244da2145f00b849ff740f55db4dfd&decode=1&w=99999&q=85");
+        $img_name = $request->ticket_number. '-1' . '.jpg';
+        $img_path = public_path('uploads/' . $img_name);
+        $img_url = "http://192.168.1.200:81/image/tbg";
+        file_put_contents($img_path, file_get_contents($img_url));
+        $weight->first_weight_picture = $img_name;
         $weight->save();
 
         return redirect('/');
@@ -48,6 +51,11 @@ class WeighingController extends Controller
         $weight->second_weight = $request->second_weight;
         $weight->second_weight_time = Carbon::now();
         $weight->nett_weight = $request->nett_weight;
+        $img_name = $request->ticket_number. '-2' . '.jpg';
+        $img_path = public_path('uploads/' . $img_name);
+        $img_url = "http://192.168.1.200:81/image/tbg";
+        file_put_contents($img_path, file_get_contents($img_url));
+        $weight->second_weight_picture = $img_name;
         $weight->status = 1;
         $weight->update();
 
@@ -79,5 +87,11 @@ class WeighingController extends Controller
     {
         $data = Weighing::orderBy('id', 'desc')->get();
         return view('data', compact('data'));
+    }
+
+    public function detail($id)
+    {
+        $detail = Weighing::find($id);
+        return view ('detail', compact('detail'));
     }
 }
