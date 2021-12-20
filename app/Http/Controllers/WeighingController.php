@@ -26,7 +26,7 @@ class WeighingController extends Controller
         $weight->first_weight_time = Carbon::now();
         $weight->first_weight = $request->first_weight;
         $weight->status = 0;
-        $img_name = $request->ticket_number. '-1' . '.jpg';
+        $img_name = $request->ticket_number . '-1' . '.jpg';
         $img_path = public_path('uploads/' . $img_name);
         $img_url = "http://192.168.1.200:81/image/tbg";
         file_put_contents($img_path, file_get_contents($img_url));
@@ -51,7 +51,7 @@ class WeighingController extends Controller
         $weight->second_weight = $request->second_weight;
         $weight->second_weight_time = Carbon::now();
         $weight->nett_weight = $request->nett_weight;
-        $img_name = $request->ticket_number. '-2' . '.jpg';
+        $img_name = $request->ticket_number . '-2' . '.jpg';
         $img_path = public_path('uploads/' . $img_name);
         $img_url = "http://192.168.1.200:81/image/tbg";
         file_put_contents($img_path, file_get_contents($img_url));
@@ -92,6 +92,20 @@ class WeighingController extends Controller
     public function detail($id)
     {
         $detail = Weighing::find($id);
-        return view ('detail', compact('detail'));
+        return view('detail', compact('detail'));
+    }
+
+    public function admin()
+    {
+        $data = Weighing::orderBy('id', 'desc')->get();
+        return view('admin.admin_data', compact('data'));
+    }
+
+    public function destroy($id)
+    {
+        $delete = Weighing::find($id);
+        $delete->delete();
+
+        return redirect('/admin');
     }
 }

@@ -1,6 +1,6 @@
 <style>
 .foto{
-  max-height : 450px;
+  max-height : 330px;
 }
 </style>
 
@@ -77,6 +77,7 @@
         <h5 class="card-header">Cam</h5>
         <div class="card-body">
             <img src="http://192.168.1.200:81/mjpg/tbg" class="img-fluid foto">
+            {{-- <img src="uploads\20211220001-1.jpg" class="img-fluid foto" alt=""> --}}
         </div>
       </div>
     </div>

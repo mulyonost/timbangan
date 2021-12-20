@@ -1,6 +1,13 @@
 @extends('layouts.master')
 
+<style>
+  .foto{
+    max-height : 350px;
+  }
+  </style>
+
 @section('title')
+
     Update Timbangan
 @endsection
 
@@ -69,6 +76,7 @@
         <h5 class="card-header">Cam</h5>
         <div class="card-body">
             <img src="http://192.168.1.200:81/mjpg/tbg" class="img-fluid foto">
+            {{-- <img src="{{ asset('uploads\20211220001-1.jpg')}}" class="img-fluid foto" alt=""> --}}
         </div>
       </div>
     </div>
@@ -77,7 +85,6 @@
     <div class="col">
       <div class="card">
         <h5 class="card-header">Transaksi Terakhir</h5>
-        <div class="card-body">
           <table class="table table-hover">
             <thead>
               <tr>

@@ -1,5 +1,6 @@
 <!-- Theme style -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="{{ asset('css/cetak.css') }}">
+<link rel="stylesheet" type="text/css" href="" media="print" />
 <style>
 
 @media print {  
@@ -7,10 +8,16 @@
     size: 210mm 297mm;
 
   }
+  body, table {
+      font-size: 12px;
+  }
+  table {
+      width: 70mm !important;
+  }
 }
 
 .pages {
-    width: 11cm;
+    width: 7cm;
     margin-right: 15cm;
     margin-top: 1cm;
 }
@@ -19,14 +26,14 @@
 <div class="page">
 <div class="container pages">
     <div class="row">
-        <div class="col-md-8 text-center">
+        <div class="col-md-3 text-center">
             PT. Aluminium Indojaya Perkasa<br>
             Jl. Kima 16 Kav DD 7<br>
             Makassar, Sulawesi Selatan<br><br>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-3">
             <table class="table table-bordered">
                 <tr>
                     <td><b>Nomor Timbangan</b></td>

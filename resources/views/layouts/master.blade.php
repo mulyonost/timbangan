@@ -48,7 +48,7 @@
   {{-- MY CSS  --}}
   <link rel="stylesheet" href="{{ asset('css/myrap.css')}}">
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="hold-transition sidebar-mini sidebar-collapse">
 <div class="wrapper">
 
   <!-- Preloader -->
