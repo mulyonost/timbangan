@@ -36,10 +36,10 @@
                 <datalist id=supp>
                    <select name=spl>
                     <option value="">
-                    <option>Amin Logam
-                    <option>Pak Rusmin
-                    <option>Pak Erik
-                    <option>Jaya Aluminium
+                    <option>AMIN LOGAM
+                    <option>RUSMIN
+                    <option>ERIK
+                    <option>JAYA ALUMINIUM
                    </select>
                  </datalist>
               </div>

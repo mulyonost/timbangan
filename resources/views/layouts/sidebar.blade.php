@@ -35,22 +35,11 @@
         </a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-plus-circle"></i>
-              <p>
-                Data
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
                 <a href="{{ route('data') }}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                <i class="nav-icon fas fa-digital-tachograph"></i>
                   <p>Data Timbangan</p>
                 </a>
               </li>
-            </ul>
-          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
