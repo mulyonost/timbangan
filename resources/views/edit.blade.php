@@ -75,8 +75,15 @@
       <div class="card">
         <h5 class="card-header">Cam</h5>
         <div class="card-body">
-            <img src="http://192.168.1.200:81/mjpg/tbg" class="img-fluid foto">
-            {{-- <img src="{{ asset('uploads\20211220001-1.jpg')}}" class="img-fluid foto" alt=""> --}}
+          <div class="row">
+            <div class="col-md-6">
+              <img src="http://192.168.1.200:81/mjpg/tbg" class="img-fluid foto">
+            </div>
+          <div class="col-md-6">
+            Foto Timbangan Pertama
+            <img src="{{asset('uploads/'.$weight->first_weight_picture)}}" class="img-thumbnail">
+          </div>
+          </div>
         </div>
       </div>
     </div>
