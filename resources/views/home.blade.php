@@ -10,7 +10,17 @@
 @endsection
 
 @section('content')
+
+<?php 
+
+$output = exec("mode COM5: BAUD=115200 PARITY=N data=8 stop=1 XON=off TO=on dtr=off odsr=off octs=off rts=on idsr=off");
+
+
+?>
 <div class="container-fluid">
+  <div class="row">
+    Read From Serial {{ $output }}
+  </div>
   <div class="row">
     <div class="col-md-4">
       <div class="card">
@@ -187,7 +197,7 @@ function makeid(length) {
 
 function getTicketNumber() {
   var today = new Date();
-  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  var date = today.getFullYear() + '-' + ('0' + (today.getMonth()+1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
   var newDate = date.replace(/-/g, "");
   var nomor = newDate + increment();
   $('#ticket_number').val(nomor);
