@@ -40,7 +40,7 @@
                     <td>{{ $dt->second_weight }}</td>
                     <td>{{ $dt->first_weight_time }}</td>
                     <td>{{ $dt->second_weight_time }}</td>
-                    <td><a href="{{ route('edit', $dt->id )}}" class="btn btn-primary">Update</a> <a href="{{ route('cetakulang', $dt->id)}}" class="btn btn-primary" target="_blank" onclick="return !window.open(this.href, 'somesite', 'width=700,height=700')">Cetak Ulang</a> <a href="{{ route('detail', $dt->id) }}" class="btn btn-primary">Detail</a> <a href="{{ route('admin.destroy', $dt->id )}}" class="btn btn-danger" onclick="return confirm('Are you sure ?')">Delete</a></td>
+                    <td><a href="{{ route('admin.edit', $dt->id )}}" class="btn btn-primary">Edit</a> <a href="{{ route('cetakulang', $dt->id)}}" class="btn btn-primary" target="_blank" onclick="return !window.open(this.href, 'somesite', 'width=700,height=700')">Cetak Ulang</a> <a href="{{ route('detail', $dt->id) }}" class="btn btn-primary">Detail</a> <a href="{{ route('admin.destroy', $dt->id )}}" class="btn btn-danger" onclick="return confirm('Are you sure ?')">Delete</a></td>
                 </tr>
                 @endforeach
             </tbody>

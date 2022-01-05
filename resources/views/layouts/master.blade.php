@@ -6,6 +6,9 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>{{ config('app.name')}} | @yield('title') </title>
 
+    <!-- My Timbangan -->
+    <link rel="stylesheet" href="{{ asset('css/timbangan.css')}}">
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{ asset('AdminLTE/plugins/fontawesome-free/css/all.min.css')}}">
 

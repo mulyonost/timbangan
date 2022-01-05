@@ -1,30 +1,3 @@
-<style>
-.foto{
-  max-height : 330px;
-}
-
-* {box-sizing: border-box;}
-
-.img-zoom-container {
-  position: relative;
-}
-
-.img-zoom-lens {
-  position: absolute;
-  border: 1px solid #d4d4d4;
-  /*set the size of the lens:*/
-  width: 40px;
-  height: 40px;
-}
-
-.img-zoom-result {
-  border: 1px solid #d4d4d4;
-  /*set the size of the result div:*/
-  width: 300px;
-  height: 300px;
-}
-</style>
-
 @extends('layouts.master')
 
 @section('title')
@@ -99,8 +72,6 @@
         <div class="card-body">
           <div class="img-zoom-container">
             <img src="http://192.168.1.200:81/mjpg/tbg" id="myimage" class="img-fluid foto">
-            <div id="myresult" class="img-zoom-result"></div>
-
           </div>
         </div>
       </div>

@@ -23,5 +23,9 @@ Route::get('/cetak', [WeighingController::class, 'cetak'])->name('cetak');
 Route::get('/data', [WeighingController::class, 'data'])->name('data');
 Route::get('/detail/{id}', [WeighingController::class, 'detail'])->name('detail');
 Route::get('/cetakulang/{id}', [WeighingController::class, 'cetakulang'])->name('cetakulang');
+
+
 Route::get('/admin', [WeighingController::class, 'admin'])->name('admin');
+Route::get('/admin/{id}/edit', [WeighingController::class, 'admin_edit'])->name('admin.edit');
+Route::put('/admin/update/{id}', [WeighingController::class, 'admin_update'])->name('admin.update');
 Route::get('/admin/delete/{id}', [WeighingController::class, 'destroy'])->name('admin.destroy');
