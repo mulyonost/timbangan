@@ -5,7 +5,8 @@
 
 @media print {  
   @page {
-    size: 210mm 297mm;
+    size: 297mm 210mm;
+    orientation: landscape;
 
   }
   body, table {
@@ -18,7 +19,7 @@
 
 .pages {
     width: 7cm;
-    margin-right: 15cm;
+    margin-right: 25cm;
     margin-top: 1cm;
 }
 
@@ -26,7 +27,7 @@
 <div class="page">
 <div class="container pages">
     <div class="row">
-        <div class="col-md-3 text-center">
+        <div class="col text-center">
             PT. Aluminium Indojaya Perkasa<br>
             Jl. Kima 16 Kav DD 7<br>
             Makassar, Sulawesi Selatan<br><br>
