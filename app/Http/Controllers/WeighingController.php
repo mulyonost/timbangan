@@ -28,7 +28,7 @@ class WeighingController extends Controller
         $weight->status = 0;
         $img_name = $request->ticket_number . '-1' . '.jpg';
         $img_path = public_path('uploads/' . $img_name);
-        $img_url = "http://192.168.1.200:81/image/tbg";
+        $img_url = "http://192.168.1.250:81/image/tbg";
         file_put_contents($img_path, file_get_contents($img_url));
         $weight->first_weight_picture = $img_name;
         $weight->save();
@@ -56,7 +56,7 @@ class WeighingController extends Controller
         $weight->nett_weight = $request->nett_weight;
         $img_name = $request->ticket_number . '-2' . '.jpg';
         $img_path = public_path('uploads/' . $img_name);
-        $img_url = "http://192.168.1.200:81/image/tbg";
+        $img_url = "http://192.168.1.250:81/image/tbg";
         file_put_contents($img_path, file_get_contents($img_url));
         $weight->second_weight_picture = $img_name;
         $weight->status = 1;

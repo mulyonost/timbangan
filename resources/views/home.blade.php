@@ -81,7 +81,7 @@ $output = exec("mode COM5: BAUD=115200 PARITY=N data=8 stop=1 XON=off TO=on dtr=
         <h5 class="card-header">Cam</h5>
         <div class="card-body">
           <div class="img-zoom-container">
-            <img src="http://192.168.1.200:81/mjpg/tbg" id="myimage" class="img-fluid foto">
+            <img src="http://192.168.1.250:81/mjpg/tbg" id="myimage" class="img-fluid foto">
           </div>
         </div>
       </div>

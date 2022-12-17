@@ -95,7 +95,7 @@
           <div class="row">
             <div class="col-md-6">
               Foto Sekarang
-              <img src="http://192.168.1.200:81/mjpg/tbg" class="img-fluid foto">
+              <img src="http://192.168.1.250:81/mjpg/tbg" class="img-fluid foto">
             </div>
             <div class="col-md-6">
               Foto Timbangan Pertama
