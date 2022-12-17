@@ -28,7 +28,7 @@
 <div class="container pages">
     <div class="row">
         <div class="col text-center">
-            PT. Aluminium Indojaya Perkasa<br>
+            PT. Rajawali Aluminium Perkasa<br>
             Jl. Kima 16 Kav DD 7<br>
             Makassar, Sulawesi Selatan<br><br>
         </div>
