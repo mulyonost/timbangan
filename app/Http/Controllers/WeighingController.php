@@ -120,7 +120,6 @@ class WeighingController extends Controller
         $weight->second_weight = $request->second_weight;
         $weight->second_weight_time = Carbon::now();
         $weight->nett_weight = $request->nett_weight;
-        $weight->status = 1;
         $weight->update();
 
         session(['print_id' => $id]);
