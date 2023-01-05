@@ -5,11 +5,22 @@ namespace App\Http\Controllers;
 use App\Models\Weighing;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
+use lepiaf\SerialPort\SerialPort;
+use lepiaf\SerialPort\Parser\SeparatorParser;
+use lepiaf\SerialPort\Configure\TTYConfigure;
 
 class WeighingController extends Controller
 {
     public function index()
     {
+        // $configure = new TTYConfigure();
+        // $configure->removeOption("9600");
+        // $configure->setOption("2400");
+        // $serialPort = new SerialPort(new SeparatorParser(), new TTYConfigure());
+
+        // $serialPort->open("COM3");
+        // $data = $serialPort->read();
+
         $unfinished = Weighing::where('status', 0)->get();
         $count = Weighing::where('created_at', '>=', Carbon::today())->count();
         $last = Weighing::orderBy('id', 'desc')->where('status', 1)->take(1)->get();
@@ -28,7 +39,7 @@ class WeighingController extends Controller
         $weight->status = 0;
         $img_name = $request->ticket_number . '-1' . '.jpg';
         $img_path = public_path('uploads/' . $img_name);
-        $img_url = "http://192.168.1.250:81/image/tbg";
+        $img_url = "http://192.168.1.250:81/image/tbg?user=kantor&pw=rajawali";
         file_put_contents($img_path, file_get_contents($img_url));
         $weight->first_weight_picture = $img_name;
         $weight->save();
@@ -56,7 +67,7 @@ class WeighingController extends Controller
         $weight->nett_weight = $request->nett_weight;
         $img_name = $request->ticket_number . '-2' . '.jpg';
         $img_path = public_path('uploads/' . $img_name);
-        $img_url = "http://192.168.1.250:81/image/tbg";
+        $img_url = "http://192.168.1.250:81/image/tbg?user=kantor&pw=rajawali";
         file_put_contents($img_path, file_get_contents($img_url));
         $weight->second_weight_picture = $img_name;
         $weight->status = 1;
